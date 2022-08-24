@@ -1,4 +1,5 @@
 node_modules/
+sanity/node_modules/
 .expo/
 dist/
 npm-debug.*
