@@ -1,6 +1,7 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import { AntDesign,Entypo } from '@expo/vector-icons';
+import { urlFor } from '../sanity';
 
 const RestaurantCard = ({
     id,
@@ -18,9 +19,9 @@ const RestaurantCard = ({
     <TouchableOpacity className="bg-white mr-3 shadow">
         <Image 
             source={{
-                uri: imgUrl
+                uri: urlFor(imgUrl).url()
             }}
-            className="w-64 h-36 rounded-sm"
+            className="w-64 h-36 rounded-sm object-contain"
         />
 
         <View className="px-3 pb-4">
@@ -35,7 +36,7 @@ const RestaurantCard = ({
 
             <View className="flex-row items-center space-x-1 mt-1">
                 <Entypo name="location-pin" size={18} color="gray" />
-                <Text className="text-xs text-gray-500">Nearby ~ {address}</Text>
+                <Text numberOfLines={2} className="text-xs text-gray-500 w-[260px]">Nearby ~ {address}</Text>
             </View>
         </View>
       
