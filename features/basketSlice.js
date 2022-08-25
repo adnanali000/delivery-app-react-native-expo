@@ -36,4 +36,7 @@ export const selectBasketItems = (state) => state.basket.items;
 //access items whose id are same
 export const selectBasketItemsWithId = (state,id) => state.basket.items.filter((item) => item.id == id)
 
+//basket total
+export const selectBasketTotal = (state) => state.basket.items.reduce((total,item) => total += item.price,0)
+
 export default basketSlice.reducer
