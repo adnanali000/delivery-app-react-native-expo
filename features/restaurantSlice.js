@@ -30,7 +30,7 @@ export const restaurantSlice = createSlice({
 export const { setRestaurant } = restaurantSlice.actions
 
 //access all item from restaurant
-export const selectrestaurant = (state) => state.restaurant.restaurant;
+export const selectRestaurant = (state) => state.restaurant.restaurant;
 
 
 export default restaurantSlice.reducer
