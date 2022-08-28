@@ -24,6 +24,8 @@ const RestaurantScreen = () => {
     },
   } = useRoute();
 
+
+
   useLayoutEffect(() => {
     navigation.setOptions({
       headerShown: false
@@ -33,6 +35,7 @@ const RestaurantScreen = () => {
 
   return (
     <>
+      
       <BasketIcon />
 
       <ScrollView>
